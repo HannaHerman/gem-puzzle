@@ -1,0 +1,182 @@
+/* @import "~normalize.css"; */
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+}
+.container {
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url(../assets/img/bg-image.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* main menu */
+.hidden {
+  visibility: hidden;
+}
+.wraper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: rgba(34, 32, 32, 0.205);
+  height: 100vh;
+  width: 100vw;
+}
+.main-menu, .end-game, .records-container  {
+  position: absolute;
+  top: 10rem;
+  left: calc(50% - 230px);
+  z-index: 100;
+  background-color: #dbc292e0;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.main-menu__title {
+  margin-top: 0;
+}
+.main-menu__field-size {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 200px;
+  justify-content: space-around;
+}
+.main-menu button {
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main-menu button:hover {
+  background-color: rgba(34, 32, 32, 0.205);
+}
+.main-menu__field-size button {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+.main-menu__field-size button:nth-child(3n) {
+  margin-right: 0;
+}
+.main-menu__records, .main-menu__previous {
+  width: 200px;
+  height: 2rem;
+}
+.main-menu__records {
+  margin-bottom: 1rem;
+}
+
+.field {
+  
+  position: relative;
+  border: 4px solid black;
+  /* box-sizing: border-box; */
+}
+
+.cell {
+  position: absolute;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.command {
+  margin-left: 10px;
+  margin-top: 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.command:first-of-type {
+  margin-left: 0;
+}
+
+.command i {
+  vertical-align: middle;
+}
+
+.command:hover {
+  background-color: #dbc2926b;
+}
+
+.results, .end-moves, .end-time {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-top: 2px;
+  font-family: sans-serif;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.results:last-of-type {
+  margin-right: 0;
+}
+
+.end-command:hover {
+  background-color: rgba(34, 32, 32, 0.205);
+}
+
+.records-line {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 150px;
+  padding: 3px 5px;
+}
+
+.records-item {
+  margin: 0;
+}
+
+.records-btn {
+  background-color: transparent;
+  padding: 5px 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.records-btn:hover {
+  background-color: rgba(34, 32, 32, 0.205);
+}
+
+.end-name {
+  margin-right: 8px;
+}
+
+@media all and (max-width: 515px) {
+  .main-menu, .end-game, .records-container {
+    width: 215px;
+    left: calc(50% - 140px);
+    top: 5rem;
+  }
+}
